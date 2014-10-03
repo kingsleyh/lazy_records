@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name = "lazy_store"
+  gem.name = "lazy_records"
   gem.homepage = "http://github.com/kingsleyh/lazy_records"
   gem.license = "MIT"
   gem.summary = %Q{port of lazy records to ruby}
