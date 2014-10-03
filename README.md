@@ -16,7 +16,7 @@ This gem requires ruby 2.x.x
 In your bundler Gemfile
 
 ```ruby
- gem lazy_records, '~>0.0.2' 
+ gem lazy_records, '~>0.0.1' 
 ```
 
 Or with rubygems
