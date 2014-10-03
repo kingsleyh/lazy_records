@@ -1,0 +1,12 @@
+require 'lock_method'
+require 'totally_lazy'
+require 'encrypted_strings'
+require 'ostruct'
+require_relative 'record'
+require_relative 'keyword'
+require_relative 'definition'
+require_relative 'memory_records'
+require_relative 'predicate_to_sql'
+require_relative 'sql_records'
+require_relative 'predicates'
+include LazyRecords
