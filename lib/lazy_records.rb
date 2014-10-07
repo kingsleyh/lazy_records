@@ -8,5 +8,6 @@ require_relative 'definition'
 require_relative 'memory_records'
 require_relative 'predicate_to_sql'
 require_relative 'sql_records'
+require_relative 'sql_virtual_records'
 require_relative 'predicates'
 include LazyRecords

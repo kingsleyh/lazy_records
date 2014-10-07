@@ -4,6 +4,10 @@ module LazyRecords
     Record.new(sequence(data).in_pairs.map { |r| {r.key.name => r.value} }.reduce({}) { |a, b| a.merge(b) })
   end
 
+  def vrecord(*data)
+    Record.new(sequence(data).in_pairs.map { |r| {r.key => r.value} }.reduce({}) { |a, b| a.merge(b) })
+  end
+
   class Record < OpenStruct
 
     def get_hash

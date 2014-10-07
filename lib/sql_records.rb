@@ -18,13 +18,9 @@ module LazyRecords
     end
 
     def get(definition, selection=nil)
-      if selection
-        sql = 'select * from ' + definition.name.to_s + ' where ' + @predicate_to_sql.convert(selection)
-        sequence(@c.query(sql).map { |r| Record.new(r) })
-      else
-        sql = 'select * from ' + definition.name.to_s
-        sequence(@c.query(sql).map { |r| Record.new(r) })
-      end
+      sql = option(selection).is_some? ? 'select * from ' + definition.name.to_s + ' where ' + @predicate_to_sql.convert(selection) :
+            'select * from ' + definition.name.to_s
+      sequence(@c.query(sql).map { |r| Record.new(r) })
     end
 
     def set(definition, selection, *updates)
@@ -33,8 +29,8 @@ module LazyRecords
       sequence(@c.query(sql))
     end
 
-    def remove(definition, selection)
-      sql = 'delete from ' + definition.name.to_s + ' where ' + @predicate_to_sql.convert(selection)
+    def remove(definition, selection=nil)
+      sql = option(selection).is_some? ? 'delete from ' + definition.name.to_s + ' where ' + @predicate_to_sql.convert(selection) : 'delete from ' + definition.name.to_s
       sequence(@c.query(sql))
     end
 
