@@ -4,6 +4,7 @@ class Sqlite3
 
   def initialize(database,show_sql=false)
     @client =  SQLite3::Database.new(database)
+    @client.results_as_hash=true
     @show_sql = show_sql
   end
 

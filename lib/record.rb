@@ -10,6 +10,17 @@ module LazyRecords
 
   class Record < OpenStruct
 
+    def initialize(hash=nil)
+      @table = {}
+      if hash
+        hash.each_pair do |k, v|
+          k = k.to_s.to_sym
+          @table[k] = v
+          new_ostruct_member(k)
+        end
+      end
+    end
+
     def get_hash
       self.instance_variable_get("@table")
     end
