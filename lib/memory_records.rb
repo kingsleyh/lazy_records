@@ -20,9 +20,9 @@ module LazyRecords
 
     def get(definition, selection=nil)
       if selection
-        @store.filter(where(key: equals(definition.name))).send(:filter, selection).map { |row| row.value }.head
+        @store.filter(where(key: equals(definition.name))).send(:filter, selection).map { |row| row.value }.head_option.get_or_else(empty)
       else
-        @store.filter(where(key: equals(definition.name))).map { |row| row.value }.head
+        @store.filter(where(key: equals(definition.name))).map { |row| row.value }.head_option.get_or_else(empty)
       end
     end
 

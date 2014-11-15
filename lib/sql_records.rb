@@ -36,6 +36,10 @@ module LazyRecords
 
     def inner_join(def1, def2, keyword_map)
       sql = 'select ' + process_columns(def1, def2) + ' from ' + def1.name.to_s + ' inner join ' + def2.name.to_s + ' on ' + process_keywords(keyword_map, def1, def2)
+      sql_query(sql)
+    end
+
+    def sql_query(sql)
       sequence(@c.query(sql).map { |r| Record.new(r) })
     end
 

@@ -7,6 +7,14 @@ describe SqlRecords do
     @records = SqlRecords.new(@c)
   end
 
+  it 'should return empty if there are no records' do
+    name = keyword(:name)
+    age = keyword(:age)
+    people = definition(:people, name, age)
+    allow(@c).to receive(:query).with('select * from people') {[]}
+    expect(@records.get(people)).to eq(empty)
+  end
+
   it 'should add records' do
     name = keyword(:name)
     age = keyword(:age)

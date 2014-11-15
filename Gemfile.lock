@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (4.1.6)
+    activesupport (4.1.7)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -18,11 +18,11 @@ GEM
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     git (1.2.8)
-    github_api (0.12.1)
+    github_api (0.12.2)
       addressable (~> 2.3)
       descendants_tracker (~> 0.0.4)
       faraday (~> 0.8, < 0.10)
-      hashie (>= 3.2)
+      hashie (>= 3.3)
       multi_json (>= 1.7.5, < 2.0)
       nokogiri (~> 1.6.3)
       oauth2
@@ -43,14 +43,13 @@ GEM
     lock_method (0.5.5)
       activesupport
       cache (>= 0.2.1)
-    mini_portile (0.6.0)
-    minitest (5.4.2)
+    mini_portile (0.6.1)
+    minitest (5.4.3)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.3.16)
-    nokogiri (1.6.3.1)
-      mini_portile (= 0.6.0)
+    nokogiri (1.6.4.1)
+      mini_portile (~> 0.6.0)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -79,7 +78,7 @@ GEM
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
     thread_safe (0.3.4)
-    totally_lazy (0.0.6)
+    totally_lazy (0.0.7)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
@@ -91,7 +90,6 @@ DEPENDENCIES
   encrypted_strings
   jeweler (~> 2.0.1)
   lock_method
-  mysql2
   rdoc (~> 3.12)
   rspec (~> 3.0.0.rc1)
   simplecov

@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 gem 'totally_lazy'
 gem 'lock_method'
 gem 'encrypted_strings'
-gem 'mysql2'
+# gem 'mysql2'
 # gem 'tiny_tds'
 
 # Add dependencies to develop your gem here.

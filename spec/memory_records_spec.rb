@@ -7,6 +7,13 @@ describe MemoryRecords do
     @records.remove_definition(:people)
   end
 
+  it 'should return empty if there are no records' do
+    name = keyword(:name)
+    age = keyword(:age)
+    people = definition(:people, name, age)
+    expect(@records.get(people)).to eq(empty)
+  end
+
   it 'should add records' do
     name = keyword(:name)
     age = keyword(:age)
