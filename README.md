@@ -1,3 +1,5 @@
+# PLEASE NOTE - This project is not being actively maintained at the moment - I am taking a break - not sure when I will return.
+
 # Lazy Records for Ruby
 
 This is a port of the java functional library [Lazy Records](https://code.google.com/p/totallylazy/) to the ruby language. It still needs a lot of tidy and re-working in several places. But it works and is a first cut.
